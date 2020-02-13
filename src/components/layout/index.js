@@ -3,9 +3,17 @@ import Header from '../header'
 import { c } from 'classy-ui/macro'
 
 const Layout = ({ children }) => (
-  <div className={c('font-sans', 'antialiased', 'subpixel-antialiased')}>
+  <div
+    className={c(
+      'font-family-sans',
+      'font-smoothing-antialiased',
+      'font-smoothing-subpixel-antialiased'
+    )}
+  >
     <Header />
-    <main className={c('flex', 'h-screen', 'items-center', 'justify-center')}>{children}</main>
+    <main className={c('flex', 'height-screen', 'align-items-center', 'justify-content-center')}>
+      {children}
+    </main>
   </div>
 )
 

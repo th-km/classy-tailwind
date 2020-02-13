@@ -1,21 +1,22 @@
 import React from 'react'
-import { c, hover, group, groupHover, lastChild } from 'classy-ui/macro'
+import { c, hover, group, groupHover } from 'classy-ui/macro'
 
 const Card = () => {
   return (
     <div className={group()}>
       <div className={card}>
         <img
-          className={c('max-w-full')}
+          className={c('max-width-full')}
           src="https://tailwindcss.com/img/card-top.jpg"
           alt="Sunset in the mountains"
         />
         <div className={spacing}>
-          <div className={c('font-bold', 'text-xl', 'mb-2')}>The Coldest Sunset</div>
-          <p className={c('text-gray-700', 'text-base', 'leading-relaxed')}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum aperiam porro commodi
-            vel voluptatum amet itaque ab. Harum, dignissimos quibusdam aliquid veniam expedita
-            tempore, molestiae incidunt quas nam, sint optio.
+          <div className={c('font-weight-bold', 'font-size-xl', 'margin-right-2')}>
+            The Coldest Sunset
+          </div>
+          <p className={c('color-gray-700', 'font-size-base', 'line-height-relaxed')}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+            Maiores et perferendis eaque, exercitationem praesentium nihil.
           </p>
         </div>
         <div className={spacing}>
@@ -31,9 +32,9 @@ const Card = () => {
 export default Card
 
 const card = c(
-  'max-w-sm',
-  'rounded',
-  'shadow-lg',
+  'max-width-sm',
+  'border-radius',
+  'box-shadow-lg',
   'overflow-hidden',
   'transition-property-transform',
   'transition-duration-200',
@@ -41,20 +42,21 @@ const card = c(
   groupHover('scale-105')
 )
 
-const spacing = c('px-6', 'py-4')
+const spacing = c('padding-left-6', 'padding-right-6', 'padding-top-4', 'padding-bottom-4')
 
 const tag = c(
-  'inline-block',
-  'mr-2',
-  'px-3',
-  'py-1',
-  'bg-gray-200',
-  'font-semibold',
-  'text-sm',
-  'text-gray-700',
-  'rounded-full',
+  'display-inline-block',
+  'margin-right-2',
+  'padding-left-3',
+  'padding-right-3',
+  'padding-top-1',
+  'padding-bottom-1',
+  'background-color-gray-200',
+  'font-weight-bold',
+  'font-size-sm',
+  'color-gray-700',
+  'border-radius-full',
   'transition-property-colors',
   'transition-duration-150',
-  lastChild('mr-0'),
-  hover('bg-gray-500')
+  hover('background-color-gray-500')
 )

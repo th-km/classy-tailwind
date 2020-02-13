@@ -4,11 +4,11 @@ import { c } from 'classy-ui/macro'
 const Header = () => {
   return (
     <header className={container}>
-      <h1 className={c('text-2xl', 'font-semibold')}>Tailwind with Classy-UI</h1>
-      <a className={c('text-black')} href="https://github.com/th-km/classy-tailwind">
+      <h1 className={c('font-size-2xl', 'font-weight-semibold')}>Tailwind with Classy-UI</h1>
+      <a className={c('color-black')} href="https://github.com/th-km/classy-tailwind">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={c('w-8', 'h-8', 'stroke-current')}
+          className={c('width-8', 'height-8', 'stroke-current')}
           viewBox="0 0 24 24"
           fill="none"
           strokeWidth="2"
@@ -26,13 +26,13 @@ const Header = () => {
 export default Header
 
 const container = c(
-  'fixed',
+  'position-fixed',
   'top-0',
   'left-0',
-  'w-full',
+  'width-full',
   'flex',
-  'items-center',
-  'justify-between',
-  'p-5',
-  'bg-gray-200'
+  'align-items-center',
+  'justify-content-between',
+  'padding-5',
+  'background-color-gray-200'
 )
